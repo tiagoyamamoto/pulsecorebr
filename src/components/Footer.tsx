@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -6,9 +7,15 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div>
-            <span className="font-syncopate text-2xl font-bold tracking-tighter block mb-6">
-              PULSE<span className="text-accent">CORE</span>
-            </span>
+            <div className="mb-6">
+              <Image 
+                src="/assets/logo-full.png" 
+                alt="Pulsecore Logo" 
+                width={200} 
+                height={60} 
+                className="h-12 w-auto"
+              />
+            </div>
             <p className="text-gray-400 text-sm leading-relaxed mb-6">
               Integradora de tecnologia em Blumenau/SC. Especialistas em infraestrutura, segurança eletrônica e energia sustentável.
             </p>
