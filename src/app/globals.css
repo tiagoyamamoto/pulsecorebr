@@ -1,6 +1,31 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --color-background: #F8FAFC;
+  --color-foreground: #0F172A;
+  
+  --color-primary: #0047AB;
+  --color-primary-light: #1A6BFF;
+  --color-primary-dark: #003087;
+  
+  --color-secondary: #1C1C1E;
+  --color-secondary-light: #2C2C2E;
+  --color-secondary-dark: #000000;
+  
+  --color-accent: #FF6700;
+  --color-accent-light: #FF8E4D;
+  --color-accent-dark: #CC5200;
+  
+  --color-tech-50: #F8FAFC;
+  --color-tech-100: #F1F5F9;
+  --color-tech-900: #0F172A;
+
+  --font-syncopate: var(--font-syncopate), sans-serif;
+  --font-space: var(--font-space-mono), monospace;
+  
+  --background-image-tech-gradient: linear-gradient(to right, #0047AB, #1C1C1E);
+  --background-image-energy-gradient: linear-gradient(to right, #FF6700, #FF8E4D);
+}
 
 :root {
   --background: #F8FAFC;
@@ -15,8 +40,8 @@
 }
 
 body {
-  color: var(--foreground);
   background: var(--background);
+  color: var(--foreground);
 }
 
 @layer components {
