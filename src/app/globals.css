@@ -1,26 +1,38 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --background: #F8FAFC;
+  --foreground: #0F172A;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1C1C1E;
+    --foreground: #F8FAFC;
   }
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-light text-white font-syncopate py-3 px-6 rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center gap-2;
+  }
+  
+  .btn-accent {
+    @apply bg-accent hover:bg-accent-light text-white font-syncopate py-3 px-6 rounded-lg transition-all duration-300 cursor-pointer flex items-center justify-center gap-2;
+  }
+  
+  .section-title {
+    @apply font-syncopate text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-8;
+  }
+  
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 shadow-xl transition-all duration-300 hover:border-white/40;
+  }
 }
